@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- CSS -->
-    <link rel="icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style/home.css">
     <!-- SWIPER CDN-->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <!-- FAVICON -->
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="icon" href="favicon.svg" type="image/x-icon">
     
     <title> Dostoievski </title>
 </head>
@@ -30,13 +30,15 @@
             <div class="chip">
                 <h2>Categoria</h2>
                 <select name="categoria" id="categoria">
-                    <option value="Bebidas">Bebidas</option>
-                    <option value="Doces">Doces</option>
+                    <option value='todos'>Todos</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="doces">Doces</option>
                 </select>
             </div>
             <div class="chip">
                 <h2>Preço</h2>
                 <select name="preco" id="preco">
+                    <option value='todos'>Qualquer</option>
                     <option value="desc">Mais caro</option>
                     <option value="asce">Mais barato</option>
                 </select>
@@ -49,7 +51,6 @@
     </div>
 
     <div class="produtos" id="produtos">
-
     </div>
 
     <div class="swiper">
@@ -58,7 +59,7 @@
                 <div class="swiper-slide">     
                     <div class="swiper-slide">
                         <div class="testemunho">
-                            <div class="imagem-testemunho">
+                            <div class="imagem-testemunho container-imagem">
                             <img src="images/pessoa1.jpg" alt="selfie minha">
                         </div>
                         <div class="texto-testemunho">
@@ -72,11 +73,11 @@
             <div class="swiper-slide">
                 <div class="swiper-slide">
                     <div class="testemunho">
-                        <div class="imagem-testemunho">
-                            <img src="images/pessoa1.jpg" alt="selfie minha">
+                        <div class="imagem-testemunho container-imagem">
+                            <img src="images/pessoa2.JPG" alt="meme que achei em um subreddit aí">
                         </div>
                         <div class="texto-testemunho">
-                            <h2>Helena Gonçalves</h2>
+                            <h2>Steve Smith</h2>
                             <p class="italico">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius orci nisl, eu malesuada leo blandit non. Sed vel ullamcorper justo. Nulla consequat magna in efficitur condimentum. Morbi molestie sapien ut enim cursus, at congue nibh tempus. Ut id dignissim orci.”</p>
                         </div>
                     </div>
@@ -86,11 +87,11 @@
             <div class="swiper-slide"> 
                 <div class="swiper-slide">
                     <div class="testemunho">
-                        <div class="imagem-testemunho">
-                            <img src="images/pessoa1.jpg" alt="selfie minha">
+                        <div class="imagem-testemunho container-imagem">
+                            <img src="images/pessoa3.png" alt="print de um tiktok da doja cat">
                         </div>
                         <div class="texto-testemunho">
-                            <h2>Helena Gonçalves</h2>
+                            <h2>Gloria Semkins</h2>
                             <p class="italico">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius orci nisl, eu malesuada leo blandit non. Sed vel ullamcorper justo. Nulla consequat magna in efficitur condimentum. Morbi molestie sapien ut enim cursus, at congue nibh tempus. Ut id dignissim orci.”</p>
                         </div>
                     </div>
@@ -99,6 +100,7 @@
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <br>
         <div class="swiper-pagination"></div>
     </div>
     
@@ -120,7 +122,7 @@
             </div>
         </div>
         <div class="rodape-admin">
-            <a href="">Ir para a página do administrador</a>
+            <a href="api/login.html">Ir para a página do administrador</a>
         </div>
     </footer>
 

@@ -2,22 +2,25 @@
     {
         "id": 1,
         "nome": "Capuccino",
+        "arquivo": "cappuccino.jpeg",
         "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "preco": 4.90,
-        "categoria": "Bebidas"
+        "preco": 4.99,
+        "categoria": "bebidas"
     },
     {
         "id": 2,
         "nome": "Expresso",
+        "arquivo": "expresso.webp",
         "descricao": "Voluptatibus, ex laudantium molestias mollitia quaerat veniam.",
         "preco": 2.49,
-        "categoria": "Bebidas"
+        "categoria": "bebidas"
     },
     {
         "id": 3,
         "nome": "Cheese cake",
+        "arquivo": "cheesecake.jpg",
         "descricao": "Quo animi, eos repellendus, dolores tempore delectus ipsam repellat at beatae quos assumenda iste itaque.",
-        "preco": 7.20,
-        "categoria": "Doces"
+        "preco": 7.25,
+        "categoria": "doces"
     }
 ]
