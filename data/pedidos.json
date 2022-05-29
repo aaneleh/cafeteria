@@ -1,0 +1,14 @@
+[
+    {
+        "id_pedido": 1,
+        "id_produto": 1
+    },
+    {
+        "id_pedido": 2,
+        "id_produto": 3
+    },
+    {
+        "id_pedido": 3,
+        "id_produto": 3
+    }
+]
