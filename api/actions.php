@@ -12,7 +12,7 @@
             break;
     }
 
-    //header('Location: index.php?pag='.$page); 
-    //exit;
+    header('Location: index.php?pag='.$page); 
+    exit;
 
 ?>
