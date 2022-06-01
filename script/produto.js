@@ -5,7 +5,7 @@ async function loadJson(){
     const id= urlParams.get('id');
 
     //FETCH
-    const response = await fetch('../data/produtos.json');
+    const response = await fetch('data/produtos.json');
     const data = await response.json();
 
     //PRINTA AS INFORMAÇÕES DO JSON
@@ -13,7 +13,7 @@ async function loadJson(){
     if(data[id] != undefined){
         produto.innerHTML = `
             <div class="produto-imagem container-imagem">
-                <img src="../images/${data[id].arquivo}" alt="${data[id].nome}">
+                <img src="images/${data[id].arquivo}" alt="${data[id].nome}">
             </div>
             <div class="produto-descricao">
                 <h2>
