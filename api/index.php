@@ -21,18 +21,21 @@
             //verifica se o usuario já logou
             //isso deu erro no vercel: session_start();
             if(isset($_SESSION['user'])){
+                echo 'você logou; pag='.$_GET['pag'];
+
                 //se tem uma página carrega ela 
-                if(isset($_GET['pag']) and !empty($_GET['pag']) and isset($_SESSION['user'])){
+                if(isset($_GET['pag']) and !empty($_GET['pag'])){
                     $pag = $_GET['pag'];
-                    require_once($pag.'.php');
-                //se não vai pra pedidos por default
                 } else {
-                    require_once('pedidos.php');
+                    //se não vai pra pedidos por default
+                    $pag = 'pedidos';
                 }
-            //se o usuario não logou vai pra pagina de login
             } else {
-                require_once('login.php');
+                echo 'você não logou';
+                //se o usuario não logou vai pra pagina de login
+                $pag = 'login';
             }
+            require_once($pag.'.php');
         ?>
     </main>
 
