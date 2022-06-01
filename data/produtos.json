@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "nome": "Capuccino",
         "arquivo": "cappuccino.jpeg",
         "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -8,7 +8,7 @@
         "categoria": "bebidas"
     },
     {
-        "id": 2,
+        "id": 1,
         "nome": "Expresso",
         "arquivo": "expresso.webp",
         "descricao": "Voluptatibus, ex laudantium molestias mollitia quaerat veniam.",
@@ -16,7 +16,7 @@
         "categoria": "bebidas"
     },
     {
-        "id": 3,
+        "id": 2,
         "nome": "Cheese cake",
         "arquivo": "cheesecake.jpg",
         "descricao": "Quo animi, eos repellendus, dolores tempore delectus ipsam repellat at beatae quos assumenda iste itaque.",

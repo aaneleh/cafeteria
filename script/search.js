@@ -1,10 +1,6 @@
 //INICIALIZAÇÃO DE VARIAVEIS GLOBAIS
 const container = document.getElementById('produtos');
-let condicoes = {
-    categoria: 'todos',
-    preco: 'todos',
-    pesquisa: null
-};
+let condicoes = { categoria: 'todos', preco: 'todos', pesquisa: null };
 
 //FUNÇÃO QUE SERÁ USADA PARA ORDENAR OS RESULTADOS POR PREÇO
 function ordenarPrecos(modo, objeto){
@@ -70,7 +66,7 @@ async function loadJson(){
                     <sup> R$ </sup>
                     ${data[i].preco}
                 </h2>
-                <a href="produto?id=${data[i].id}" class="buy-button"> Compre agora </a>
+                <a href="api/produto.html?id=${data[i].id}" class="buy-button"> Compre agora </a>
             `
             container.appendChild(produto);
         }

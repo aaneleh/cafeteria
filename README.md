@@ -25,4 +25,4 @@ A página do administrados também contará com um login (fixo) e uma área para
 
 ## Demonstração
 
-_Em construção_
+_Ainda indisponível_
