@@ -9,10 +9,11 @@
                 $_SESSION['user'] = $_POST['user'];
                 $page = 'pedidos';
             }
+            print_r($_SESSION);
             break;
     }
 
-    header('Location: index.php?pag='.$page); 
-    exit;
+    //header('Location: index.php?pag='.$page); 
+    //exit;
 
 ?>
