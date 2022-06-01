@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +23,6 @@
     <main>
         <?php   
             //verifica se o usuario já logou
-            session_start();
             if(isset($_SESSION['user'])){
                 echo 'você logou; pag='.$_GET['pag'];
 
