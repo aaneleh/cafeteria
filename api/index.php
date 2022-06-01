@@ -19,7 +19,7 @@
     <main>
         <?php   
             //verifica se o usuario já logou
-            session_start();
+            //isso deu erro no vercel: session_start();
             if(isset($_SESSION['user'])){
                 //se tem uma página carrega ela 
                 if(isset($_GET['pag']) and !empty($_GET['pag']) and isset($_SESSION['user'])){
