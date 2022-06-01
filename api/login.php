@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/base.css">
 </head>
 <body>
 
