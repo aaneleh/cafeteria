@@ -1,14 +1,16 @@
 <?php
-    $page = 'login';
+    session_start();
+
     $action = $_POST['action'];
 
     switch ($action){
         case 'login':
+            $page = 'login&status=wrongpass';
             if($_POST['pass'] == '1234') {//senha fixa
-                $_SESSION['user'] = $_POST['user'];
+                $_SESSION['logon'] = true;
                 $page = 'pedidos';
             }
-            print_r($_SESSION);
+
             break;
     }
 

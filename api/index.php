@@ -1,5 +1,10 @@
 <?php
     session_start();
+    
+    $jsonPedidos = file_get_contents("../data/pedidos.json");
+    $jsonProdutos = file_get_contents("../data/produtos.json");
+    $dadosPedidos = json_decode($jsonPedidos, true);
+    $dadosProdutos = json_decode($jsonProdutos, true);
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +28,7 @@
     <main>
         <?php   
             //verifica se o usuario já logou
-            if(isset($_SESSION['user'])){
-                echo 'você logou; pag='.$_GET['pag'];
-
+            if(isset($_SESSION['logon']) and $_SESSION['logon'] == 1){
                 //se tem uma página carrega ela 
                 if(isset($_GET['pag']) and !empty($_GET['pag'])){
                     $pag = $_GET['pag'];
@@ -34,7 +37,6 @@
                     $pag = 'pedidos';
                 }
             } else {
-                echo 'você não logou';
                 //se o usuario não logou vai pra pagina de login
                 $pag = 'login';
             }
