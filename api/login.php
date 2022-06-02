@@ -1,5 +1,6 @@
 <div class="login">
         <form action="POST.php" method="POST" class="login-container">
+            <input type="hidden" name="action" value="login">
             <h1>Login</h1>
             <h2>Usuário</h2>
             <input type="text" name="user" id="user">
