@@ -18,7 +18,7 @@
                     echo "<td>".$produto['nome']."</td>";
                     echo "<td>".$pedido['horario']."</td>";
                     echo "<td>[ ]</td>";
-                    echo "<td> X </td>";
+                    echo "<td> <a href='GET.php?action=delPed&id=".$i."'> X </a> </td>";
                 echo "</tr>";
             }
         ?>
