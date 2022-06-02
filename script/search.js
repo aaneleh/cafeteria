@@ -6,7 +6,6 @@ let condicoes = { categoria: 'todos', preco: 'todos', pesquisa: null };
 function ordenarPrecos(modo, objeto){
     var obj = objeto;
     var troca;
-    console.log(modo)
     switch(modo){
         case 'asce':
             for (var i = 0; i < obj.length; i ++){
@@ -52,23 +51,26 @@ async function loadJson(){
     //PRINTA AS INFORMAÇÕES DO JSON
     container.innerHTML = "";
     for(i=0; i < data.length; i++){
-        //CHECA SE O PRODUTO ATUAL DO LOOP ATINGE A CONDICAO DA CATEGORIA, SE NÃO ATINGIR NÃO PRINTA
-        if(condicoes.categoria == 'todos' || data[i].categoria == condicoes.categoria){ 
-            const produto = document.createElement('div');
-            produto.innerHTML = `
+        //CHECA SE O PRODUTO ATUAL ATINGE A CONDICAO DA CATEGORIA, SE NÃO ATINGIR NÃO PRINTA
+        if(condicoes.categoria == 'todos' || data[i].categoria == condicoes.categoria){
+            //CHECA SE O PRODUTO ATUAL ATINGE A CONDICAO DA PESQUISA, SE NÃO ATINGIR NÃO PRINTA
+            if(condicoes.pesquisa == null || data[i].nome.toUpperCase().includes( condicoes.pesquisa.toUpperCase() )) {
+                const produto = document.createElement('div');
+                produto.innerHTML = `
                 <h2>
-                    ${data[i].nome}
+                ${data[i].nome}
                 </h2>
                 <div class="produto-imagem container-imagem">
-                    <img src="images/${data[i].arquivo}" alt="${data[i].nome}">
+                <img src="images/${data[i].arquivo}" alt="${data[i].nome}">
                 </div>
                 <h2>
-                    <sup> R$ </sup>
-                    ${data[i].preco}
+                <sup> R$ </sup>
+                ${data[i].preco}
                 </h2>
                 <a href="produto.html?id=${data[i].id}" class="buy-button"> Compre agora </a>
-            `
+                `
             container.appendChild(produto);
+            }   
         }
     }
     //SE NADA FOI PRINTADO COLOCA UM AVISO
