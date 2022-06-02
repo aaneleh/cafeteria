@@ -67,7 +67,7 @@ async function loadJson(){
                 <sup> R$ </sup>
                 ${data[i].preco}
                 </h2>
-                <a href="produto.html?id=${data[i].id}" class="buy-button"> Compre agora </a>
+                <a href="produto.html?id=${i}" class="buy-button"> Compre agora </a>
                 `
             container.appendChild(produto);
             }   
