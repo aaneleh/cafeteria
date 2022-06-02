@@ -1,6 +1,6 @@
 <div>
     <h1>Lista de Pedidos</h1>
-    <table border='1'>
+    <table border='1' class="tabela-pedidos">
         <tr>
             <th>ID</th>
             <th>Pedido</th>
@@ -8,13 +8,19 @@
             <th>Feito</th>
             <th>Cancelar</td>
         </tr>
-        <tr>
-            <td>01</td>
-            <td>Capuccino</td>
-            <td>22-05-27; 9:35</td>
-            <td>[ ]</td>
-            <td>X</td>
-        </tr>
-    </table>
 
+        <?php
+            for($i =0; $i < count($dadosPedidos); $i++){
+                $pedido = $dadosPedidos[$i];
+                $produto = $dadosProdutos[$pedido['id_produto']];
+                echo "<tr>";
+                    echo "<td>".$i."</td>";
+                    echo "<td>".$produto['nome']."</td>";
+                    echo "<td>".$pedido['horario']."</td>";
+                    echo "<td>[ ]</td>";
+                    echo "<td> X </td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
 </div>

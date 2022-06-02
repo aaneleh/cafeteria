@@ -1,14 +1,17 @@
 [
     {
-        "id_pedido": 1,
-        "id_produto": 1
+        "id_produto": 0,
+        "horario": "22-05-27; 9:35",
+        "feito": 0
     },
     {
-        "id_pedido": 2,
-        "id_produto": 3
+        "id_produto": 2,
+        "horario": "22-05-27; 9:35",
+        "feito": 0
     },
     {
-        "id_pedido": 3,
-        "id_produto": 3
+        "id_produto": 2,
+        "horario": "22-05-27; 9:35",
+        "feito": 0
     }
 ]
