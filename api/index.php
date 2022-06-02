@@ -51,7 +51,7 @@
             <a href="index.php?pag=adicionar">Novo Produto</a>
         </div>
         <div class="rodape-admin">
-            <a href="sair.php">Sair</a>
+            <a href="GET.PHP?action=sair">Sair</a>
         </div>
     </footer>
 </body>
