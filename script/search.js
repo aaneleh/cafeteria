@@ -40,7 +40,7 @@ function ordenarPrecos(modo, objeto){
 //CARREGAR E PRINTAR AS INFORMAÇÕES DO produtos.json
 async function loadJson(){
     //FETCH
-    const response = await fetch('api/data/produtos.json');
+    const response = await fetch('data/produtos.json');
     const data = await response.json();
     
     //ORDENAR POR PRECO (ASCENDENTE OU DESCRESCENTE)

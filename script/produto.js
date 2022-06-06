@@ -5,7 +5,7 @@ async function loadJson(){
     const id= urlParams.get('id');
 
     //FETCH
-    const response = await fetch('api/data/produtos.json');
+    const response = await fetch('data/produtos.json');
     const data = await response.json();
 
     //PRINTA AS INFORMAÇÕES DO JSON
