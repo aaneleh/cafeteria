@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $jsonPedidos = file_get_contents("../data/pedidos.json");
-    $jsonProdutos = file_get_contents("../data/produtos.json");
+    $jsonPedidos = file_get_contents("../pedidos.json");
+    $jsonProdutos = file_get_contents("../produtos.json");
     $dadosPedidos = json_decode($jsonPedidos, true);
     $dadosProdutos = json_decode($jsonProdutos, true);
 
@@ -17,7 +17,7 @@
             //EXCLUIR PRODUTOS
             case 'delProd':
                 array_splice($dadosProdutos, $id, 1);
-                if(!file_put_contents("../data/produtos.json", json_encode($dadosProdutos, JSON_PRETTY_PRINT), LOCK_EX)){
+                if(!file_put_contents("../produtos.json", json_encode($dadosProdutos, JSON_PRETTY_PRINT), LOCK_EX)){
                     echo("ERRO SALVANDO O ARQUIVO");
                 } else echo("SUCESSO");
                 $page = "index.php?pag=produtos";
@@ -26,7 +26,7 @@
             //EXCLUIR PEDIDOS
             case 'delPed':
                 array_splice($dadosPedidos, $id, 1);
-                if(!file_put_contents("../data/pedidos.json", json_encode($dadosPedidos, JSON_PRETTY_PRINT), LOCK_EX)){
+                if(!file_put_contents("../pedidos.json", json_encode($dadosPedidos, JSON_PRETTY_PRINT), LOCK_EX)){
                     echo("ERRO SALVANDO O ARQUIVO");
                 } else echo("SUCESSO");
                 $page = "index.php?pag=pedidos";
@@ -39,7 +39,7 @@
                 } else {                    
                     $dadosPedidos[$id]['feito'] = 1;
                 }
-                if(!file_put_contents("../data/pedidos.json", json_encode($dadosPedidos, JSON_PRETTY_PRINT), LOCK_EX)){
+                if(!file_put_contents("../pedidos.json", json_encode($dadosPedidos, JSON_PRETTY_PRINT), LOCK_EX)){
                     echo("ERRO SALVANDO O ARQUIVO");
                 } else echo("SUCESSO");
                 
