@@ -1,8 +1,8 @@
 <?php
     session_start();
     
-    $jsonPedidos = file_get_contents("../data/pedidos.json");
-    $jsonProdutos = file_get_contents("../data/produtos.json");
+    $jsonPedidos = file_get_contents("data/pedidos.json");
+    $jsonProdutos = file_get_contents("data/produtos.json");
     $dadosPedidos = json_decode($jsonPedidos, true);
     $dadosProdutos = json_decode($jsonProdutos, true);
 ?>
