@@ -26,10 +26,6 @@
     justify-content: space-between;
     gap: 1em;
 }
-.chip input, .chip select, .chip option{
-    background-color: var(--primaria);
-    border: 0.1 solid var(--terciaria);
-}
 @media screen and (min-width: 870px) {
     .search-container {
         padding: 1em;

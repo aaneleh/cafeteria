@@ -19,7 +19,7 @@
                     echo "<td>".$produto['preco']."</td>";
                     echo "<td>".$produto['descricao']."</td>";
                     echo "<td> <a href='GET.php?action=delProd&id=".$i."'> <i class='bi bi-x-lg'></i> </a> </td>";
-                    echo "<td> ... </td>";
+                    echo "<td> <a href='index.php?pag=editar&id=$i'> <i class='bi bi-three-dots'></i> </a> </td>";
                 echo "</tr>";
             }
         ?>
