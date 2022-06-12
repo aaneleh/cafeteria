@@ -3,12 +3,19 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
 :root {
-    --font-color: #000;
-    --background-color: #FFF;
-    --primaria: #FFF175; /*e6e6e6*/
-    --secundaria: #FFAA5B; /*D9D9D9*/
-    --terciaria: #FF5151;
-    --terciaria-hover: #ff7a7a;
+    --font-color: rgb(226, 226, 226);
+    --background-color: #0c0c0c;
+    --nav: #0c0c0c;
+    --rodape: #0c0c0c;
+    --barra-pesquisa: #0c0c0c;
+    /* blocos */
+    --primaria: #151515;
+    /* sombras */
+    --secundaria: #4f4f4f; 
+    /* botao */
+    --terciaria: #d56300;
+    --terciaria-hover: #ff7700;
+
 }
 * {
     padding: 0;
@@ -37,6 +44,9 @@ h1 {
 a, p {
     font-size: 1.1rem;
 }
+input, select {
+    color: var(--font-color);
+}
 .logo {
     font-style: italic;
 }
@@ -52,11 +62,24 @@ a, p {
     object-fit: cover;
 }
 
+/* BOTAO **/
+.buy-button {
+    background-color: var(--terciaria);
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+    transform: scale(1);
+    transition: all 0.2s ease-in;
+}
+.buy-button:hover{
+    background-color: var(--terciaria-hover);
+    transform: scale(1.1);
+}
+
 /************** NAV BAR ******************/
 .nav {
-    background-color: var(--primaria);
+    background-color: var(--nav);
     width: 100%;
-    padding: 0.5em 0em;
+    padding: 1em 0em;
     position: relative;
     z-index: 100;
 }
@@ -72,9 +95,10 @@ a, p {
 /************** RODAPE ******************/
 .rodape {
     margin-top: 1em;
-    background-color: var(--primaria);
+    background-color: var(--rodape);
     width: 100%;
     padding: 0.5em 0em;
+    box-shadow: 0 -0.1em 0.5em var(--primaria);
 }
 .rodape-container {
     width: 90%;

@@ -2,19 +2,14 @@
 .search-bar {
     width: 95%;
     margin: 1em auto 0;
-    background-color: var(--primaria);
+    background-color: var(--barra-pesquisa);
     border-radius: 0.5em;
 
     z-index: 10;
-    position: absolute;
-    opacity: 0;
-    transform: translateY(-200%);
-    transition: all 0.25s;
-}
-.search-bar.active {
     position: relative;
-    transform: translateY(0);
     opacity: 1;
+
+    transition: all 0.25s;
 }
 
 .search-container {
@@ -30,7 +25,10 @@
     display: flex;
     justify-content: space-between;
     gap: 1em;
-
+}
+.chip input, .chip select, .chip option{
+    background-color: var(--primaria);
+    border: 0.1 solid var(--terciaria);
 }
 @media screen and (min-width: 870px) {
     .search-container {
@@ -47,7 +45,7 @@
     width: 90%;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem ,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem ,1fr));
     column-gap: 2em;
     row-gap: 2em;
 }
@@ -66,17 +64,7 @@
     background-color: var(--primaria);
     border-radius: 0.5em;
 }
-.buy-button {
-    background-color: var(--terciaria);
-    padding: 0.5em 0.75em;
-    border-radius: 0.25em;
-    transform: scale(1);
-    transition: all 0.2s ease-in;
-}
-.buy-button:hover{
-    background-color: var(--terciaria-hover);
-    transform: scale(1.1);
-}
+
 
 /************** TESTEMUNHOS ******************/
 .imagem-testemunho{

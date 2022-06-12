@@ -57,12 +57,12 @@ async function loadJson(){
             if(condicoes.pesquisa == null || data[i].nome.toUpperCase().includes( condicoes.pesquisa.toUpperCase() )) {
                 const produto = document.createElement('div');
                 produto.innerHTML = `
-                <h2>
-                ${data[i].nome}
-                </h2>
                 <div class="produto-imagem container-imagem">
                 <img src="images/${data[i].arquivo}" alt="${data[i].nome}">
                 </div>
+                <h2>
+                ${data[i].nome}
+                </h2>
                 <h2>
                 <sup> R$ </sup>
                 ${data[i].preco}
