@@ -1,8 +1,28 @@
 const container = document.getElementById('produto');
+const urlParams = new URLSearchParams(window.location.search);
+
+//MODAIS DE ERRO E SUCESSO NA COMPRA
+const ThanksModal = document.getElementById('thanks-modal');
+const ErrorModal = document.getElementById('error-modal');
+
+function toggleError(){
+    ErrorModal.classList.toggle('active');
+}
+function toggleThanks(){
+    ThanksModal.classList.toggle('active');
+}
+
+
 async function loadJson(){
     //GET ID
-    const urlParams = new URLSearchParams(window.location.search);
     const id= urlParams.get('id');
+
+    const status = urlParams.get('status');
+    if(status == 'ok'){
+        toggleThanks()
+    } else if(status == 'error'){
+        toggleError()
+    }
 
     //FETCH
     const response = await fetch('produtos.json');
@@ -24,7 +44,7 @@ async function loadJson(){
                     <sup> R$ </sup>
                     ${data[id].preco}
                 </h2>
-                <p class="clicavel buy-button"> Compre agora </p>
+                <a href="api/comprar.php?id=${id}"class="clicavel buy-button"> Compre agora </a>
             </div>
         `
         container.appendChild(produto);

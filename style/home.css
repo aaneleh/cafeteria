@@ -122,6 +122,8 @@
     height: 16rem;
     overflow: hidden;
     border-radius: 0.25em;
+    background-color: var(--secundaria);
+    text-align: center;
 }
 @media screen and (min-width: 870px) {
     #produto > div {
@@ -135,4 +137,33 @@
         align-items: flex-start;
         margin-left: 4em;
     }
+}
+
+/* MODAIS */
+.modal {
+    /* centraliza */
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    /*transição*/
+    transform: translate(-50%,-50%) scale(0);
+    visibility: hidden;
+    transition: visibility 0.15s, transform 0.3s;
+
+    /* aspecto geral */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    width: min(90%, 40em);
+    background-color: var(--primaria);
+    border: 0.15em solid var(--secundaria);
+    border-radius: 0.5em;
+    box-shadow: 0.5em 0.5em 1em var(--secundaria);
+}
+.modal.active{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
 }

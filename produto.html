@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/home.css">
     <!-- FAVICON -->
     <link rel="icon" href="favicon.svg" type="image/x-icon">
     <title>Produto</title>
 </head>
 <body>
+
+    <div class="modal" id="thanks-modal">
+        <h2>Obrigada pela sua compra!</h2>
+        <p>Seu pedido chegará em breve</p>
+        <p onclick='toggleThanks()' class="clicavel buy-button">De nada!</p>
+    </div>
+    <div class="modal" id="error-modal">
+        <h2>Houve um erro com seu pedido!</h2>
+        <p>Pedimos desculpa pelo inconveniente, por favor tente novamente.</p>
+        <p onclick='toggleError()' class="clicavel buy-button">Fechar</p>
+    </div>
+
     <nav class="nav">
         <div class="nav-container">
             <div class="hidden"> .  </div>
@@ -39,7 +51,6 @@
             <a href="api/index.php">Ir para a página do administrador</a>
         </div>
     </footer>
-
 
     <script src="script/produto.js"></script>
 </body>
