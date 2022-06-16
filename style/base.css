@@ -4,14 +4,12 @@
 
 :root {
     --font: #000;
-    --bg: #F9F9F9;
+    --bg: #FFF;
     --sombra: #b8b8b8;
 
     --main: #E19F58;
     --mainLight: #F3BE84;
     --mainLighter: #F8E3D4;
-
-
 }
 *{
     margin: 0;
@@ -19,7 +17,7 @@
 body {
     font-family: 'Cabin', sans-serif;
     color: var(--font-color);
-    background-color: var(--background-color);
+    background-color: var(--bg);
     overflow-x: hidden;
 }
 html {

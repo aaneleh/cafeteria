@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="style/base.css">
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/produto.css">
     <!-- FAVICON -->
     <link rel="icon" href="favicon.svg" type="image/x-icon">
     <title>Produto</title>
@@ -24,31 +24,31 @@
         <p onclick='toggleError()' class="clicavel buy-button">Fechar</p>
     </div>
 
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="hidden"> .  </div>
-            <a href="index.html"> <h1 class="logo">  Dostoievski  </h1></a>
-            <a href="index.html"> <h1 class="clicavel"> <i class="bi bi-house-heart"></i> </h1></a>
-        </div>
+    <nav id="nav-produto">
+        <img src="images/Dostoievski.png" alt="Dostoievski">
+        <a href="index.html" class="icone-home">
+            <i class="bi bi-house-heart"></i>
+        </a>
     </nav>
 
     <main id="produto">
 
     </main>
 
-    <footer class="rodape">
-        <div class="rodape-container">
+    <footer>
+        <div class="top-footer">
             <div>
-                <h1 class="logo"> Dostoievski </h1>
+                <a href="index.html">Dostoievski</a>
             </div>
-            <div class="redes-sociais">
-                <a href="">Twitter</a>
-                <a href="">Github</a>
-                <a href="">Instagram</a>
+            <div class="sociais">
+                <span> <a href="https://twitter.com/helena_kurzzz">Twitter</a> </span>
+                <span> <a href="https://github.com/aaneleh">Github</a> </span>
+                <span> <a href="https://www.instagram.com/helena.kurz/">Instagram</a> </span>
             </div>
         </div>
-        <div class="rodape-admin">
-            <a href="api/index.php">Ir para a página do administrador</a>
+
+        <div class="bottom-footer">
+            <a href="api/index.php">Admin</a>
         </div>
     </footer>
 

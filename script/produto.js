@@ -32,7 +32,7 @@ async function loadJson(){
     const produto = document.createElement('div');
     if(data[id] != undefined){
         produto.innerHTML = `
-            <div class="produto-imagem container-imagem">
+            <div class="produto-imagem">
                 <img src="images/${data[id].arquivo}" alt="${data[id].nome}">
             </div>
             <div class="produto-descricao">
@@ -44,7 +44,9 @@ async function loadJson(){
                     <sup> R$ </sup>
                     ${data[id].preco}
                 </h2>
-                <a href="api/comprar.php?id=${id}"class="clicavel buy-button"> Compre agora </a>
+                <a class="botao-produto" href="api/comprar.php?id=${id}">
+                    Compre agora
+                </a>
             </div>
         `
         container.appendChild(produto);
