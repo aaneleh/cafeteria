@@ -1,7 +1,9 @@
-<div>
+<div class="produtos">
     <h1>Produtos</h1>
-    <a class="buy-button" href="index.php?pag=adicionar">Novo Produto</a>
-    <table border='1' class="tabela-produtos">
+    <a id="botao-novo-produto" href="index.php?pag=adicionar">
+        Novo Produto
+    </a>
+    <table class="tabela-produtos">
         <tr>
             <th>ID</th>
             <th>Nome</th>

@@ -1,6 +1,6 @@
-<div>
+<div class="pedidos">
     <h1>Lista de Pedidos</h1>
-    <table border='1' class="tabela-pedidos">
+    <table class="tabela-pedidos">
         <tr>
             <th>ID</th>
             <th>Pedido</th>

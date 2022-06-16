@@ -36,6 +36,13 @@ i {
 }
 
 
+main {
+    width: 100%;
+    height: auto;
+    min-height: 77.9vh;
+    margin-top: 10vh;
+    position: relative;
+}
 /************* NAV ************/
 nav {
     position: fixed;
@@ -49,9 +56,7 @@ nav {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 77%, rgba(255,255,255,0.6698113207547169) 100%);
 }
-main {
-    margin-top: 10vh;
-}
+
 
 /************************** FOOTER ***************************/
 footer {

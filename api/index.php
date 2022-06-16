@@ -16,13 +16,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet" href="../style/base.css">
+    <!-- FAVICON -->
+    <link rel="icon" href="../favicon.svg" type="image/x-icon">
     <title>Admin</title>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-container">
-            <h1 class="logo"> Dostoievski </h1>
-        </div>
+
+    <nav>
+        <img src="../images/Dostoievski.png" alt="Dostoievski">
     </nav>
 
     <main>
@@ -44,13 +45,13 @@
         ?>
     </main>
 
-    <footer class="rodape">
-        <div class="rodape-container">
+    <footer id="footer-admin">
+        <div>
             <a href="index.php?pag=pedidos">Pedidos</a>
             <a href="index.php?pag=produtos">Produtos</a>
             <a href="index.php?pag=adicionar">Novo Produto</a>
         </div>
-        <div class="rodape-admin">
+        <div>
             <a href="GET.PHP?action=sair">Sair</a>
         </div>
     </footer>
