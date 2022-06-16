@@ -16,114 +16,110 @@
 </head>
 <body>
 
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="hidden"> .  </div>
-            <a href="../index.html"> <h1 class="logo">  Dostoievski  </h1></a>
-            <div class="hidden"> .  </div>
-        </div>
+    <nav>
+        <img src="images/Dostoievski.png" alt="Dostoievski">
     </nav>
 
-    <div class="search-bar" id="search-bar">
-        <div class="search-container">
-            <div class="chip">
-                <h2>Categoria</h2>
-                <select name="categoria" id="categoria">
-                    <option value='todos'>Todos</option>
-                    <option value="bebidas">Bebidas</option>
-                    <option value="doces">Doces</option>
-                </select>
-            </div>
-            <div class="chip">
-                <h2>Preço</h2>
-                <select name="preco" id="preco">
-                    <option value='todos'>Qualquer</option>
-                    <option value="desc">Mais caro</option>
-                    <option value="asce">Mais barato</option>
-                </select>
-            </div>
-            <div class="chip">
-                <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui">
-                <h2 onclick="pesquisar()" class="clicavel"> <i class="bi bi-search"></i> </h2>
-            </div>
-        </div>
-    </div>
+    <main>
 
-    <div class="produtos" id="produtos">
-    </div>
+        <section class="pesquisa">
+            <div class="categorias">
+                <p class="categoria ativa" id="bebidas" onclick='toggleBebidas()'>
+                    Bebidas
+                </p>
+                <p class="categoria ativa" id="doces" onclick='toggleDoces()'>
+                    Doces
+                </p>
+                <p class="categoria ativa" id="salgados" onclick='toggleSalgados()'>
+                    Salgados
+                </p>
+            </div>
+            <div class="form">
+                <div>
+                    <select id="preco">
+                        <option value='todos'>Qualquer</option>
+                        <option value="desc">Mais caro</option>
+                        <option value="asce">Mais barato</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <input type="text" id="pesquisa" placeholder="Pesquise aqui">
+                    <i onclick="pesquisar()" class="bi bi-search"></i>
+                </div>
+            </div>
+        </section>
 
-    <div class="swiper">
+        <section class="produtos" id="produtos">
+            
+        </section>
+
+        <section class="testemunhos swiper">
             <div class="swiper-wrapper">
                 <!-- SLIDE 1 -->
                 <div class="swiper-slide">     
                     <div class="swiper-slide">
                         <div class="testemunho">
                             <div class="imagem-testemunho container-imagem">
-                            <img src="images/pessoa1.jpg" alt="selfie minha">
+                                <img src="images/pessoa1.jpg" alt="selfie minha">
+                            </div>
+                            <div class="texto-testemunho">
+                                <h2>Helena Gonçalves</h2>
+                                <p> — “A melhor cafeteria da cidade”</p>
+                            </div>
                         </div>
-                        <div class="texto-testemunho">
-                            <h2>Helena Gonçalves</h2>
-                            <p class="italico">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius orci nisl, eu malesuada leo blandit non. Sed vel ullamcorper justo. Nulla consequat magna in efficitur condimentum. Morbi molestie sapien ut enim cursus, at congue nibh tempus. Ut id dignissim orci.”</p>
+                    </div> 
+                </div>
+                <!-- SLIDE 2 -->
+                <div class="swiper-slide">
+                    <div class="swiper-slide">
+                        <div class="testemunho">
+                            <div class="imagem-testemunho container-imagem">
+                                <img src="images/pessoa2.JPG" alt="meme que achei em um subreddit aí">
+                            </div>
+                            <div class="texto-testemunho">
+                                <h2>Steve Smith</h2>
+                                <p>“Integer varius orci nisl, eu malesuada leo blandit non."</p>
+                            </div>
                         </div>
                     </div>
-                </div> 
-            </div>
-            <!-- SLIDE 2 -->
-            <div class="swiper-slide">
-                <div class="swiper-slide">
-                    <div class="testemunho">
-                        <div class="imagem-testemunho container-imagem">
-                            <img src="images/pessoa2.JPG" alt="meme que achei em um subreddit aí">
-                        </div>
-                        <div class="texto-testemunho">
-                            <h2>Steve Smith</h2>
-                            <p class="italico">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius orci nisl, eu malesuada leo blandit non. Sed vel ullamcorper justo. Nulla consequat magna in efficitur condimentum. Morbi molestie sapien ut enim cursus, at congue nibh tempus. Ut id dignissim orci.”</p>
+                </div>
+                <!-- SLIDE 3 -->
+                <div class="swiper-slide"> 
+                    <div class="swiper-slide">
+                        <div class="testemunho">
+                            <div class="imagem-testemunho container-imagem">
+                                <img src="images/pessoa3.png" alt="print de um tiktok da doja cat">
+                            </div>
+                            <div class="texto-testemunho">
+                                <h2>Gloria Semkins</h2>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- SLIDE 3 -->
-            <div class="swiper-slide"> 
-                <div class="swiper-slide">
-                    <div class="testemunho">
-                        <div class="imagem-testemunho container-imagem">
-                            <img src="images/pessoa3.png" alt="print de um tiktok da doja cat">
-                        </div>
-                        <div class="texto-testemunho">
-                            <h2>Gloria Semkins</h2>
-                            <p class="italico">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius orci nisl, eu malesuada leo blandit non. Sed vel ullamcorper justo. Nulla consequat magna in efficitur condimentum. Morbi molestie sapien ut enim cursus, at congue nibh tempus. Ut id dignissim orci.”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <br>
-        <div class="swiper-pagination"></div>
-    </div>
-    
-    <footer class="rodape">
-        <div class="rodape-container">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top-footer">
             <div>
-                <h1 class="logo"> Dostoievski </h1>
+                <a href="index.html">Dostoievski</a>
             </div>
-            <div onclick='toggleSearch()' class="clicavel">
-                <a href="#search-bar">
-                    <i class="bi bi-search"></i>
-                    Pesquisar 
-                </a>
-            </div>
-            <div class="redes-sociais">
-                <a href="">Twitter</a>
-                <a href="">Github</a>
-                <a href="">Instagram</a>
+            <div class="sociais">
+                <span> <a href="https://twitter.com/helena_kurzzz">Twitter</a> </span>
+                <span> <a href="https://github.com/aaneleh">Github</a> </span>
+                <span> <a href="https://www.instagram.com/helena.kurz/">Instagram</a> </span>
             </div>
         </div>
-        <div class="rodape-admin">
-            <a href="api/index.php">Ir para a página do administrador</a>
+
+        <div class="bottom-footer">
+            <a href="api/index.php">Admin</a>
         </div>
-    </footer>
+    </footer>>
 
     <!-- SCRIPTS -->
     <script src="script/search.js"></script>

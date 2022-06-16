@@ -1,6 +1,9 @@
 //INICIALIZAÇÃO DE VARIAVEIS GLOBAIS
 const container = document.getElementById('produtos');
-let condicoes = { categoria: 'todos', preco: 'todos', pesquisa: null };
+let categorias = ['bebidas','doces','salgados'];
+let preco = 'todos';
+let pesquisa = null;
+
 
 //FUNÇÃO QUE SERÁ USADA PARA ORDENAR OS RESULTADOS POR PREÇO
 function ordenarPrecos(modo, objeto){
@@ -44,32 +47,34 @@ async function loadJson(){
     const data = await response.json();
     
     //ORDENAR POR PRECO (ASCENDENTE OU DESCRESCENTE)
-    if(condicoes.preco != 'todos'){
-        ordenarPrecos(condicoes.preco, data);
+    if(preco != 'todos'){
+        ordenarPrecos(preco, data);
     }
 
     //PRINTA AS INFORMAÇÕES DO JSON
     container.innerHTML = "";
     for(i=0; i < data.length; i++){
         //CHECA SE O PRODUTO ATUAL ATINGE A CONDICAO DA CATEGORIA, SE NÃO ATINGIR NÃO PRINTA
-        if(condicoes.categoria == 'todos' || data[i].categoria == condicoes.categoria){
+        if(categorias.length == 0 || categorias.includes(data[i].categoria)){
             //CHECA SE O PRODUTO ATUAL ATINGE A CONDICAO DA PESQUISA, SE NÃO ATINGIR NÃO PRINTA
-            if(condicoes.pesquisa == null || data[i].nome.toUpperCase().includes( condicoes.pesquisa.toUpperCase() )) {
+            if(pesquisa == null || data[i].nome.toUpperCase().includes( pesquisa.toUpperCase() )) {
                 const produto = document.createElement('div');
                 produto.innerHTML = `
-                <div class="produto-imagem container-imagem">
-                <img src="images/${data[i].arquivo}" alt="${data[i].nome}">
-                </div>
-                <h2>
-                ${data[i].nome}
-                </h2>
-                <h2>
-                <sup> R$ </sup>
-                ${data[i].preco}
-                </h2>
-                <a href="produto.html?id=${i}" class="buy-button"> Compre agora </a>
+                    <div class="imagem-produto">
+                        <img src="images/${data[i].arquivo}" alt="${data[i].nome}">
+                    </div>
+                    <p class="produto-nome">
+                        ${data[i].nome}
+                    </p>
+                    <div class="botao-compra">
+                        <a class="link-compra" href="produto.html?id=${i}" >
+                            <span class="preco">R$ ${data[i].preco}</span>
+                            <span class="icone"><i class="bi bi-cart"></i></span>
+                        </a>
+                    </div>
                 `
-            container.appendChild(produto);
+                produto.classList.add('produto');
+                container.appendChild(produto);
             }   
         }
     }
@@ -80,27 +85,53 @@ async function loadJson(){
 }
 loadJson(); //inicia o site carregando as informações, claro
 
-//VISIBILIDADE DA BARRA DE PESQUISA
-function toggleSearch() {
-    const searchBar = document.getElementById('search-bar');
-    searchBar.classList.toggle('active');
+function removeCategoria(novaCategoria){
+    for(var i = 0;i<categorias.length;i++){
+        if(categorias[i] == novaCategoria){
+            categorias.splice(i,1);
+            i = categorias.length;
+            document.getElementById(novaCategoria).classList.remove('ativa');
+        }
+    }
+}
+
+function toggleBebidas(){
+    if(!categorias.includes('bebidas')){
+        categorias.push('bebidas');
+        document.getElementById('bebidas').classList.add('ativa');
+    } else removeCategoria('bebidas');
+    pesquisar();
+}
+
+function toggleDoces(){
+    if(!categorias.includes('doces')){
+        categorias.push('doces');
+        document.getElementById('doces').classList.add('ativa');
+    } else removeCategoria('doces');
+    pesquisar();
+}
+
+function toggleSalgados(){
+    if(!categorias.includes('salgados')){
+        categorias.push('salgados');
+        document.getElementById('salgados').classList.add('ativa');
+    } else removeCategoria('salgados');
+    pesquisar();
 }
 
 //FUNÇÃO DE PESQUISA
 function pesquisar() {
     //pega as informações dos inputs
-    const categoria = document.getElementById('categoria').value;
-    condicoes.categoria = categoria;
-    const preco = document.getElementById('preco').value;
-    condicoes.preco = preco;
-    const search_input = document.getElementById('pesquisa').value;
-    if(search_input == ""){
-        condicoes.pesquisa = null;
+    const precoEl = document.getElementById('preco').value;
+    preco = precoEl;
+    const searchEl = document.getElementById('pesquisa').value;
+    if(searchEl == ""){
+        pesquisa = null;
     } else {
-        condicoes.pesquisa = search_input.toUpperCase();
+        pesquisa = searchEl.toUpperCase();
     }
     //se não foi colocado nenhum parametro na pesquisa ele nem recarrega o json
-    if(categoria != null || preco != null || search_input != null){
+    if(categorias.length == 0 || preco != null || searchEl != null){
         loadJson();
     }
 }
