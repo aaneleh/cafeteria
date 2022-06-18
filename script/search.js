@@ -140,3 +140,6 @@ const search_input = document.getElementById('pesquisa').addEventListener('keyup
         pesquisar();
     }
 });
+const preco_select = document.getElementById('preco').addEventListener('change', function(event){
+    pesquisar();
+});
