@@ -89,9 +89,10 @@ td {
 /* botao de submit */
 .form-submit {
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
     background-color: var(--main);
     border-width: 0;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     cursor: pointer;
     transform: scale(1);
     transition: all 0.2s ease;
@@ -100,3 +101,12 @@ td {
     background-color: var(--mainLight);
     transform: scale(1.1);
 }
+.form-imagem {
+width: 100px;
+height: 100px;
+}
+.form-imagem img{
+object-fit: cover;
+height: 100%;
+width: 100%;
+    }
