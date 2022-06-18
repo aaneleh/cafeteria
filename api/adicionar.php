@@ -1,4 +1,4 @@
-<form action="POST.php" method="POST">
+<form class="form-novo" action="POST.php" method="POST">
     <input type="hidden" name="action" value="adicionar">
 
     <h1>Novo produto</h1>
@@ -31,6 +31,5 @@
     <h2>Imagem:</h2>
     <input type="file" name="imagem">
 
-    <br><br>
-    <input type="submit" class="buy-button" value="Adicionar">
+    <input type="submit" class="form-submit" value="Adicionar">
 </form>

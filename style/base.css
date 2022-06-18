@@ -20,6 +20,10 @@ body {
     background-color: var(--bg);
     overflow-x: hidden;
 }
+input, select, textarea {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1rem;
+}
 html {
     scroll-behavior: smooth;
 }

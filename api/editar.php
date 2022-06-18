@@ -1,7 +1,6 @@
-<form action="POST.php" method="POST">
+<form class="form-edit" action="POST.php" method="POST">
     <input type="hidden" name="action" value="editar">
     
-
     <?php 
         $jsonProdutos = file_get_contents("../produtos.json");
         $dadosProdutos = json_decode($jsonProdutos, true);
@@ -34,9 +33,8 @@
             
                 <h2>Imagem:</h2>
                 <input type='file' name='imagem' value=".$produto['arquivo'].">
-            
-                <br><br>
-                <input type='submit' class='clicavel buy-button' value='Adicionar'>
+                
+                <input type='submit' class='form-submit' value='Adicionar'>
             ";
         } else {
             echo 'Produto inválido';
