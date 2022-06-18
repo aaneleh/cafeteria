@@ -1,4 +1,4 @@
-<form class="form-novo" action="POST.php" method="POST">
+<form class="form-novo" action="POST.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="action" value="adicionar">
 
     <h1>Novo produto</h1>
@@ -25,11 +25,12 @@
         <?php
             echo '<option value="doces">';
             echo '<option value="bebidas">';
+            echo '<option value="salgados">';
         ?>
     </datalist>
 
     <h2>Imagem:</h2>
-    <input type="file" name="imagem">
+    <input type="file" name="file">
 
     <input type="submit" class="form-submit" value="Adicionar">
 </form>

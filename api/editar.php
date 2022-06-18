@@ -1,4 +1,4 @@
-<form class="form-edit" action="POST.php" method="POST">
+<form class="form-edit" action="POST.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="action" value="editar">
     
     <?php 
@@ -28,12 +28,19 @@
                     <?php
                         echo '<option value='doces'>';
                         echo '<option value='bebidas'>';
+                        echo '<option value='salgados'>';
                     ?>
                 </datalist>
             
                 <h2>Imagem:</h2>
-                <input type='file' name='imagem' value=".$produto['arquivo'].">
-                
+                <i>• Se nenhuma imagem for inserida o produto continuará com a mesma imagem</i>
+
+                <div class='form-imagem'>
+                    <img src=../images/".$produto['arquivo']." alt=".$produto['nome']."> </img>
+                </div>
+
+                <input type='file' name='file' value=".$produto['arquivo'].">
+
                 <input type='submit' class='form-submit' value='Adicionar'>
             ";
         } else {
