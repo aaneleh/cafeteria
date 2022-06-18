@@ -1,17 +1,17 @@
 [
     {
         "nome": "Capuccino",
-        "arquivo": "cappuccino.jpeg",
-        "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "descricao": "Um pouco de caf\u00e9 com muito leite, a\u00e7\u00facar e espuma.",
         "preco": 4.99,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "arquivo": "cappuccino.jpeg"
     },
     {
         "nome": "Expresso",
-        "arquivo": "expresso.webp",
-        "descricao": "Voluptatibus, ex laudantium molestias mollitia quaerat veniam.",
+        "descricao": "Caf\u00e9 cl\u00e1ssico, perfeito para qualquer ocasi\u00e3o.",
         "preco": 2.49,
-        "categoria": "bebidas"
+        "categoria": "bebidas",
+        "arquivo": "expresso.webp"
     },
     {
         "nome": "Cheese cake",
@@ -19,5 +19,12 @@
         "descricao": "Quo animi, eos repellendus, dolores tempore delectus ipsam repellat at beatae quos assumenda iste itaque.",
         "preco": 7.25,
         "categoria": "doces"
+    },
+    {
+        "nome": "Empada",
+        "descricao": "Nosso unico salgado",
+        "preco": 3.99,
+        "categoria": "salgados",
+        "arquivo": "4empada.png"
     }
 ]
