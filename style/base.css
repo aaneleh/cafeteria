@@ -3,8 +3,10 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
 :root {
-    --font: #000;
-    --bg: #FFF;
+    --preto: #000;
+    --pretoTransparente: rgba(0,0,0,0.6); 
+    --branco: #FFF;
+    --brancoTransparente: rgba(255,255,255,0.6); 
     --sombra: #b8b8b8;
 
     --main: #E19F58;
@@ -16,9 +18,40 @@
 }
 body {
     font-family: 'Cabin', sans-serif;
-    color: var(--font-color);
-    background-color: var(--bg);
     overflow-x: hidden;
+}
+[class*="tema-"] {
+    color: var(--fonte);
+    background-color: var(--bg);
+    
+} 
+.tema-claro{
+    --fonte: #000000;
+    --bg: #fff;
+    --degrade: rgba(255,255,255,0.6);
+}
+.tema-claro #logo{
+    filter: invert(0%);
+}
+.tema-escuro{
+    --fonte: #ffffff;
+    --bg: #000;
+    --degrade: rgba(0,0,0,0.6);
+}
+.tema-escuro #logo{
+    filter: invert(100%);
+}
+
+a {
+    color: var(--fonte);
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+a:hover {
+    background: var(--main);
+}
+i {
+    color: var(--fonte);
 }
 input, select, textarea {
     font-family: 'Cabin', sans-serif;
@@ -26,17 +59,6 @@ input, select, textarea {
 }
 html {
     scroll-behavior: smooth;
-}
-a {
-    color: var(--font);
-    text-decoration: none;
-    transition: all 0.2s ease-in;
-}
-a:hover {
-    background: var(--main);;
-}
-i {
-    color: var(--font-color);
 }
 
 
@@ -51,24 +73,39 @@ main {
 nav {
     position: fixed;
     top: 0;
-    padding-top: 2vh;
+    padding-top: 1vh;
     padding-left: 2vw;
     height: 8vh;
     width: 100%;
     z-index: 1000;
 
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 77%, rgba(255,255,255,0.6698113207547169) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--bg);
+    background: linear-gradient(180deg, var(--bg) 77%, var(--degrade) 100%);
 }
 
+.nav-icone {
+    font-size: 2.5em;
+    position: fixed;
+    right: 1em;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.nav-icone:hover {
+    font-size: 2.8em;
+    background: var(--bg);
+}
 
 /************************** FOOTER ***************************/
 footer {
     height: 12vh;
     width: 100%;
 
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 77%, rgba(255,255,255,0.6698113207547169) 100%);
+    background: var(--bg);
+    background: linear-gradient(0deg, var(--bg) 77%, var(--degrade) 100%);
 
     border-top: 1px solid var(--sombra);
     box-shadow: 0 -1px 5px var(--sombra);

@@ -16,6 +16,9 @@
     display: flex;
     gap: 0.25em;
 }
+.input i {
+    cursor: pointer;
+}
 .form {
     display: flex;
     width: 100%;
@@ -26,6 +29,7 @@
     padding: 0.25em 0.5em;
     border-radius: 0.25em;
     cursor: pointer;
+    color: var(--preto);
 }
 .categoria.ativa {
     background-color: var(--main);
@@ -87,7 +91,6 @@
 }
 /* BOTAO DE COMPRA */
 .botao-compra {
-    color: black;
     position: relative;
     overflow: hidden;
     width: 6em;
@@ -103,6 +106,10 @@
     left:0;
     width: 100%;
     height: 100%;
+    color: var(--preto);
+}
+.link-compra i{
+    color: var(--preto);
 }
 .icone, .preco {
     position: absolute;
