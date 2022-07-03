@@ -5,7 +5,7 @@
 
     <?php 
         if(isset($_GET['status']) and $_GET['status'] == 'invalid'){
-            echo 'Nome ou preço inválido';
+            echo 'Dados inválidos';
         }
 
     ?>

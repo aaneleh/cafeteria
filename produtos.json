@@ -1,8 +1,8 @@
 [
     {
-        "nome": "Capuccino",
-        "descricao": "Um pouco de caf\u00e9 com muito leite, a\u00e7\u00facar e espuma.",
-        "preco": 4.99,
+        "nome": "Capuccino com Caneca",
+        "descricao": "Caf\u00e9 com leite, espuma e canela.",
+        "preco": 5.15,
         "categoria": "bebidas",
         "arquivo": "cappuccino.jpeg"
     },
@@ -26,5 +26,12 @@
         "preco": 3.99,
         "categoria": "salgados",
         "arquivo": "4empada.png"
+    },
+    {
+        "nome": "Pastel",
+        "descricao": "Pastel frito de carne mo\u00edda",
+        "preco": 5.5,
+        "categoria": "salgados",
+        "arquivo": "4PastelFrito.png"
     }
 ]

@@ -1,5 +1,6 @@
 const body = document.querySelector('body');
 const botao = document.getElementById('muda-modo');
+
 botao.addEventListener('click', () => {
     //MUDA PARA ESCURO SE CLICOU NA LUA
     if(botao.classList.contains('bi-moon-stars')){
@@ -20,6 +21,6 @@ botao.addEventListener('click', () => {
         //muda o tema pra claro
         body.classList.add('tema-claro');
         body.classList.remove('tema-escuro');
-    }
 
+    }
 })

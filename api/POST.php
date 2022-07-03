@@ -44,7 +44,7 @@
                     $nomeArquivo = $arquivo['name'];
                     $localArquivo = $arquivo['tmp_name'];
                     //verificando por erros e tamanho do arquivo
-                    if($arquivo['error'] == 0 and $arquivo['size'] < 100000){
+                    if($arquivo['error'] == 0 and $arquivo['size'] < 500000){
                         $novoNomeArquivo = count($dadosProdutos).$nomeArquivo;
                         $novoProduto->arquivo = $novoNomeArquivo;
 
@@ -55,7 +55,7 @@
                             break;
                         }
                     } else {
-                        echo("ERRO SALVANDO A IMAGEM");
+                        echo("ERRO SALVANDO A IMAGEM POR CAUSA DO TAMANHO");
                         break; //se não puder salvar o arquivo nem tenta salvar o resot
                     }
 
@@ -69,8 +69,8 @@
                         $page = "produtos";
                     }
                     
-                }
-            }
+                } else { echo 'input de nome, preco ou categoria, inválido'; }
+            } else { echo 'não logado'; }
             break;
 
         /****** EDITAR ******/
@@ -100,11 +100,11 @@
                             if(move_uploaded_file($localArquivo, '../images/'.$novoNomeArquivo)) {
                                 echo("SUCESSO");
                             } else {
-                                echo("ERRO 2 SALVANDO A IMAGEM");
+                                echo("ERRO SALVANDO A IMAGEM");
                                 break;
                             }
                         } else {
-                            echo("ERRO 1 SALVANDO A IMAGEM");
+                            echo("ERRO SALVANDO A IMAGEM POR CAUSA DO TAMANHO");
                             break; //se não puder salvar o arquivo nem tenta salvar o resot
                         }
                     } else { //se não foi inserida uma imagem mantem o mesmo nome

@@ -20,7 +20,7 @@
     <link rel="icon" href="../favicon.svg" type="image/x-icon">
     <title>Admin</title>
 </head>
-<body class="tema-escuro">
+<body>
 
     <nav>
         <img id="logo" src="../images/Dostoievski.png" alt="Dostoievski">

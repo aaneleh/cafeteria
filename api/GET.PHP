@@ -6,10 +6,10 @@
     $dadosProdutos = json_decode($jsonProdutos, true);
 
     $page = "index.php";
+    $action = $_GET['action'];
 
     //verifica se esta logado antes de fazer qualquer alteração nos dados
     if(isset($_SESSION['logon']) and $_SESSION['logon'] == 1){
-        $action = $_GET['action'];
         $id = $_GET['id'];
         
         switch($action){
@@ -45,14 +45,14 @@
                 
                 $page = "index.php?pag=pedidos";
                 break;
-
-            //TERMINA A SESSÃO
-            case 'sair':
-                session_destroy();
-                $page = "../index.html";
-                break;
         }
     }
+    //NÃO PRECISA ESTAR LOGADO
+    if ($action == "sair"){
+        session_destroy();
+        $page = "../index.html";
+    }
+
     header('Location: '.$page); 
     exit;
 ?>
