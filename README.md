@@ -28,4 +28,6 @@ A página do administrados também contará com um login e uma área para editar
 
 ## Demonstração
 
-_Em breve_
+[![Thumbnail](https://img.youtube.com/vi/kvAO3IbmsXs/0.jpg)](https://youtu.be/kvAO3IbmsXs)
+  
+Acesse o site [aqui](https://aaneleh.github.io/neon-lights/)
