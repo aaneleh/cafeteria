@@ -1,7 +1,7 @@
 # Cafeteria
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/aaneleh/cafeteria)
-[![wakatime](https://wakatime.com/badge/user/63a62ebf-02b8-40ab-b01b-99f672dace05/project/685d2d2e-7ebc-41d6-aa4a-418d584b6871.svg)](https://wakatime.com/badge/user/63a62ebf-02b8-40ab-b01b-99f672dace05/project/685d2d2e-7ebc-41d6-aa4a-418d584b6871)
+[![wakatime](https://wakatime.com/badge/github/aaneleh/cafeteria.svg)](https://wakatime.com/badge/github/aaneleh/cafeteria)
 [![Badge twitter](https://img.shields.io/twitter/follow/helena_kurzzz)](https://twitter.com/helena_kurzzz)
 
 ## Índice
