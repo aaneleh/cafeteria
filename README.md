@@ -12,12 +12,12 @@
 
 ## Descrição
 
-Landing page de uma cafeteria e também site para administração com funções para adição, edição e exclusão de produtos.
-A página principal conta com uma barra de pesquisa por categoria, ordenagem por preço e pesquisa de texto.
-O site conta com tema claro e escuro que funciona mudando a classe do body da página o que troca o valor das propriedades css usadas dentro dele.
-Os usuários podem clicar em _"comprar produto"_ o que acionará um modal agradecendo o cliente e adicionará seu pedido à um .json.
-A página principal do administrador terá uma lista de todos os pedidos listados no arquivo json e poderá marcá-los como _"entregue"_ ou exclui-lo.
-A página do administrados também contará com um login e uma área para editar as informações de qualquer produto e adicionar novos.
+Landing page de uma cafeteria e também site para administração com funções para adição, edição e exclusão de produtos.  
+A página principal conta com uma barra de pesquisa por categoria, ordenagem por preço e pesquisa de texto.  
+O site conta com tema claro e escuro que funciona mudando a classe do body da página o que troca o valor das propriedades css usadas dentro dele.  
+Os usuários podem clicar em _"comprar produto"_ o que acionará um modal agradecendo o cliente e adicionará seu pedido à um .json.  
+A página principal do administrador terá uma lista de todos os pedidos listados no arquivo json e poderá marcá-los como _"entregue"_ ou exclui-lo.  
+A página do administrados também contará com um login e uma área para editar as informações de qualquer produto e adicionar novos.  
 
 ## Linguagens
 
